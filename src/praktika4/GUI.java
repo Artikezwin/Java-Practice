@@ -124,7 +124,7 @@ class GUI extends JFrame{
         setSize(500, 500);
     }*/
 
-    JLabel lbl = new JLabel("");
+    /*JLabel lbl = new JLabel("");
     public GUI(){
         super("Чувак! Где моя мышка?");
         setSize(400, 400);
@@ -144,6 +144,72 @@ class GUI extends JFrame{
             @Override
             public void mouseExited(MouseEvent e) {}
         });
+    }*/
+
+    JPanel[] pnl = new JPanel[4];
+    private int a=0, b=0;
+    private String team = "N/A";
+    private String  win = "пока что никто)";
+
+    JLabel score = new JLabel(a+"_X_"+b);
+    JLabel last = new JLabel("Последний забивший гол - " + team);
+    Label winner = new Label("И побеждает - " + win);
+    Font fnt = new Font("Times new roman", Font.BOLD, 40);
+
+    public GUI(){
+        super("Мужики, футбол, ураааа!");
+        setLayout(new GridLayout(2, 2));
+        for(int i=0;i<pnl.length;i++){
+            pnl[i] = new JPanel();
+            if(i%2==0) pnl[i].setBackground(new Color(100, 255, 100));
+            else pnl[i].setBackground(new Color(255, 100, 100));
+            add(pnl[i]);
+        }
+
+        JButton button_Real = new JButton("Забил гол Реал Мадрид");
+        JButton button_Milan = new JButton("Забил гол Милан");
+
+
+        pnl[0].add(button_Real);
+        pnl[1].add(button_Milan);
+
+        pnl[2].setLayout(new FlowLayout());
+        pnl[2].add(last);
+        pnl[2].add(winner);
+
+        score.setFont(fnt);
+        pnl[3].add(score);
+
+        button_Real.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                a+=1;
+                if(a==b) win = "пока что никто)";
+                else if(a>b) win = "Побеждает Реал Мадрид!";
+                else win = "Побеждает Милан!";
+                team = "Реал Мадрид";
+                winner.setText("И побеждает - " + win);
+                last.setText("Последний забивший гол - " + team);
+                score.setText(a+"_X_"+b);
+            }
+        });
+
+        button_Milan.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                b+=1;
+                if(a==b) win = "пока что никто)";
+                else if(a>b) win = "Побеждает Реал Мадрид!";
+                else win = "Побеждает Милан!";
+                team = "Милан";
+                winner.setText("И побеждает - " + win);
+                last.setText("Последний забивший гол - " + team);
+                score.setText(a+"_X_"+b);
+            }
+        });
+
+
+        setSize(500, 500);
     }
 
 
