@@ -209,7 +209,7 @@ class GUI extends JFrame{
         });
 
 
-        setSize(500, 500);
+        setSize(550, 250);
     }
 
 
