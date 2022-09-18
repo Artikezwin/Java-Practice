@@ -77,7 +77,7 @@ class GUI extends JFrame{
 
     }*/
 
-    JPanel[] pnl = new JPanel[12];
+    /*JPanel[] pnl = new JPanel[12];
     public GUI(){
         setLayout(new GridLayout(3, 4));
         for(int i=0; i<pnl.length; i++){
@@ -105,8 +105,23 @@ class GUI extends JFrame{
 
         setSize(800, 500);
 
+    }*/
 
+    JButton but1 = new JButton("Один");
+    JButton but2 = new JButton("Два");
+    JButton but3 = new JButton("Три");
 
+    public GUI(){
+        setLayout(null);    //null - самостоятельно задаем размер и координаты всем полям, кнопкам
+        but1.setBounds(150, 300, 100, 20);
+        but2.setSize(80, 400); //координаты - 0,0
+        but3.setLocation(300, 100); //размер по умолчанию
+        but3.setSize(200, 75);
+
+        add(but1);
+        add(but2);
+        add(but3);
+        setSize(500, 500);
     }
 
 
