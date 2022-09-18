@@ -21,7 +21,7 @@ class GUI extends JFrame{
         setVisible(true);
     }*/
 
-    JTextField jta1 = new JTextField(10);
+    /*JTextField jta1 = new JTextField(10);
     JTextField jta2 = new JTextField(10);
 
     JButton button = new JButton(" Тыкай");
@@ -51,7 +51,32 @@ class GUI extends JFrame{
             }
         });
         setVisible(true);
+    }*/
+
+    JTextArea jta1 = new JTextArea(10, 25);
+
+    JScrollPane jScroll = new JScrollPane(jta1);
+    JButton button = new JButton("Нажми на кнопку");
+    public GUI(){
+        super("Example");
+        setSize(300, 300);
+        setLayout(new FlowLayout());    // setLayout - прорисовка, позволяет приложению работаь при различных разрешениях
+        // FlowLayout() - Добавляет все компоненты в таком порядке, в котором все написано в программе
+        add(jta1);
+        add(button);
+        //add(jScroll);
+        button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String txt = JOptionPane.showInputDialog(null, "Вставьте текст");
+
+                jta1.append(txt);
+            }
+        });
+
     }
+
+
 
 }
 
