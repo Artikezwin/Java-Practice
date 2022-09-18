@@ -2,8 +2,9 @@ package praktika4;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+//import java.awt.event.ActionEvent;
+//import java.awt.event.ActionListener;
+import java.awt.event.*;
 
 class GUI extends JFrame{
 
@@ -53,7 +54,7 @@ class GUI extends JFrame{
         setVisible(true);
     }*/
 
-    JTextArea jta1 = new JTextArea(10, 25);
+    /*JTextArea jta1 = new JTextArea(10, 25);
 
     JScrollPane jScroll = new JScrollPane(jta1);
     JButton button = new JButton("Нажми на кнопку");
@@ -74,8 +75,39 @@ class GUI extends JFrame{
             }
         });
 
-    }
+    }*/
 
+    JPanel[] pnl = new JPanel[12];
+    public GUI(){
+        setLayout(new GridLayout(3, 4));
+        for(int i=0; i<pnl.length; i++){
+            int r = (int)(Math.random()*255);
+            int b = (int)(Math.random()*255);
+            int g = (int)(Math.random()*255);
+            pnl[i] = new JPanel();
+            pnl[i].setBackground(new Color(r,g,b));
+            add(pnl[i]);
+        }
+
+        pnl[4].setLayout(new BorderLayout());
+        pnl[4].add(new JButton("один"), BorderLayout.WEST);
+        pnl[4].add(new JButton("два"), BorderLayout.EAST);
+        pnl[4].add(new JButton("три"), BorderLayout.SOUTH);
+        pnl[4].add(new JButton("четыре"), BorderLayout.NORTH);
+        pnl[4].add(new JButton("пять"), BorderLayout.CENTER);
+
+        pnl[10].setLayout(new FlowLayout());
+        pnl[10].add(new JButton("один"));
+        pnl[10].add(new JButton("два"));
+        pnl[10].add(new JButton("три"));
+        pnl[10].add(new JButton("четыре"));
+        pnl[10].add(new JButton("пять"));
+
+        setSize(800, 500);
+
+
+
+    }
 
 
 }
