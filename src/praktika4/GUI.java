@@ -107,7 +107,7 @@ class GUI extends JFrame{
 
     }*/
 
-    JButton but1 = new JButton("Один");
+    /*JButton but1 = new JButton("Один");
     JButton but2 = new JButton("Два");
     JButton but3 = new JButton("Три");
 
@@ -122,6 +122,28 @@ class GUI extends JFrame{
         add(but2);
         add(but3);
         setSize(500, 500);
+    }*/
+
+    JLabel lbl = new JLabel("");
+    public GUI(){
+        super("Чувак! Где моя мышка?");
+        setSize(400, 400);
+        setLayout(new BorderLayout());
+        add(lbl, BorderLayout.SOUTH);
+        addMouseListener(new MouseListener() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                lbl.setText("X=" + e.getX() + " Y=" + e.getY());
+            }
+            @Override
+            public void mousePressed(MouseEvent e) {}
+            @Override
+            public void mouseReleased(MouseEvent e) {}
+            @Override
+            public void mouseEntered(MouseEvent e) {}
+            @Override
+            public void mouseExited(MouseEvent e) {}
+        });
     }
 
 
