@@ -32,7 +32,7 @@ public class Sort {
             s = s + Integer.toString(ID[i]);
             if(i!=ID.length-1) s = s + " ";
         }
-        return s;
+        return "Отсортированный массив - "+s;
     }
 
     public void InsertionSort(){    //Сортировка вставками
