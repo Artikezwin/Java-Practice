@@ -1,50 +1,27 @@
 package praktika6;
 
-import java.util.*;
-
 public class Sort {
-    int[] ID = new int[10];
+    public Student[] compareTo(Student[] mas){    //Сортировка вставками
+        Student vrem;
 
-    public Sort() {
-        int min = 100;
-        int max = 200;
-
-        for(int i=0;i<ID.length;i++){
-            Random random = new Random();
-            ID[i]=random.nextInt(min, max);
-            //System.out.println(ID[i]);
-        }
-    }
-
-     private static void swap(int x, int y){
-        System.out.println(x);
-        System.out.println(y);
-        int vrem=x;
-        x=y;
-        y=vrem;
-    }
-
-    @Override
-    public String toString() {
-        String s = "";
-        for(int i=0;i<ID.length;i++){
-            s = s + Integer.toString(ID[i]);
-            if(i!=ID.length-1) s = s + " ";
-        }
-        return "Отсортированный массив - "+s;
-    }
-
-    public void InsertionSort(){    //Сортировка вставками
-        int vrem;
-        for(int i=1;i<ID.length;i++){
-            for(int j=i;j>0 && ID[j-1]>ID[j];j--){
+        for(int i=1;i<mas.length;i++){
+            for(int j=i;j>0 && mas[j-1].getID()>mas[j].getID();j--){
                 //swap(ID[j-1], ID[j]);
-                vrem = ID[j];
-                ID[j] = ID[j-1];
-                ID[j-1] = vrem;
+                vrem = mas[j];
+                mas[j] = mas[j-1];
+                mas[j-1] = vrem;
             }
         }
+        return mas;
     }
 
-
+    public String output(Student[] mas) {
+        String s = "";
+        for(int i=0;i<mas.length;i++){
+            s = s + Integer.toString(mas[i].getID()) + ": ";
+            s = s + "Имя - " +  mas[i].getName()+"\n";
+            if(i!=mas.length-1) s = s + " ";
+        }
+        return "Массив - " + s;
+    }
 }

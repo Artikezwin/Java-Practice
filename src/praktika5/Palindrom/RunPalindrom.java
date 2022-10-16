@@ -1,4 +1,5 @@
-package praktika5;
+package praktika5.Palindrom;
+
 import java.util.*;
 
 

@@ -1,4 +1,4 @@
-package praktika5;
+package praktika5.Palindrom;
 
 
 public class Palindrom {
