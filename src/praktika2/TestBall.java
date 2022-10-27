@@ -1,4 +1,4 @@
-package prakrtika2;
+package praktika2;
 
 public class TestBall {
     public static void main(String[] args) {

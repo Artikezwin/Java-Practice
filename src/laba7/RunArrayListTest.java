@@ -1,6 +1,6 @@
 package laba7;
 
-public class RunArrayListtest {
+public class RunArrayListTest {
     public static void main(String[] args) {
         ArrayListTest obj = new ArrayListTest();
         obj.add(0, new Cat("white", "ghost"));

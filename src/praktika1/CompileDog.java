@@ -1,4 +1,4 @@
-package prakrika1;
+package praktika1;
 
 public class CompileDog {
     public static void main(String[] args){
