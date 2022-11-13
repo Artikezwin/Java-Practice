@@ -1,4 +1,4 @@
-package praktika10;
+package praktika8;
 
 import java.util.Collection;
 

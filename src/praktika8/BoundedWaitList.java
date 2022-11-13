@@ -1,4 +1,4 @@
-package praktika10;
+package praktika8;
 
 public class BoundedWaitList<E> extends WaitList{
     private int capacity;
@@ -12,13 +12,12 @@ public class BoundedWaitList<E> extends WaitList{
     }
 
     public void add(Object element){
-
+        if(content.size() == capacity) return;
+        super.add(element);
     }
 
     @Override
     public String toString() {
-        return "BoundedWaitList{" +
-                "capacity=" + capacity +
-                '}';
+        return content.toString();
     }
 }
