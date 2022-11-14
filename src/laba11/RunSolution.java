@@ -16,5 +16,6 @@ public class RunSolution {
         System.out.println(set);
         HashMap map = test.newHashMap(numbers, lines);
         System.out.println(map);
+
     }
 }
