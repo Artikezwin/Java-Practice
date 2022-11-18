@@ -3,7 +3,7 @@ package praktika9;
 public class RunClient {
     public static void main(String[] args) {
         /**
-         *Amogus v1.2
+         *Amogus v1.3
           */
 
     }
