@@ -1,4 +1,4 @@
-package practiki.prac_13_14;
+package praktika13_14;
 // СДАНО
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -28,7 +28,7 @@ public class Main {
         // ЗАДАНИЕ 1
         SimpleDateFormat sdf=new SimpleDateFormat("dd.MM.yyyy");
         Date now = new Date();
-        System.out.println("ФИО разработчика:\tЕрмишова СМ");
+        System.out.println("ФИО разработчика:\tСлуцкий АМ");
         System.out.println("Дата разработки:\t13.11.2022");
         System.out.println("Текущая дата:\t\t"+sdf.format(now));
         System.out.println();

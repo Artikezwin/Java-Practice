@@ -1,4 +1,4 @@
-package practiki.prac_11_12;
+package praktika11_12;
 import java.util.StringTokenizer;
 public class Address {
     String[] adress = new String[7];

@@ -4,7 +4,6 @@ import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.Scanner;
 import java.util.regex.*;
-//СДАНО
 
 /*
 1. Необходимо реализовать консольное приложение, позволяющее манипулировать строкой, разбив ее

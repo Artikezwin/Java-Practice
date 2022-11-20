@@ -1,4 +1,4 @@
-package practiki.prac_11_12;
+package praktika11_12;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -38,7 +38,7 @@ public class Main {
     public static void main(String[] args) {
 
         String line = "";
-        try(FileReader reader = new FileReader("src/practiki/prac_11_12/sourse/inp.txt")){
+        try(FileReader reader = new FileReader("src/praktika11_12/sourse/inp.txt")){
             int c;
             while((c=reader.read())!=-1){
                 line += (char)c;

@@ -1,4 +1,4 @@
-package practiki.prac_11_12;
+package praktika11_12;
 
 public class Shirt {
     //"S010,Orange T-Shirt,Orange,S";

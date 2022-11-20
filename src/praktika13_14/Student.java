@@ -1,4 +1,4 @@
-package practiki.prac_13_14;
+package praktika13_14;
 
 import java.text.DateFormat;
 import java.util.Date;

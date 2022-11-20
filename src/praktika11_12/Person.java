@@ -1,4 +1,4 @@
-package practiki.prac_11_12;
+package praktika11_12;
 
 public class Person {
     private String name="Name", fam="Fam", ot="Ot";
