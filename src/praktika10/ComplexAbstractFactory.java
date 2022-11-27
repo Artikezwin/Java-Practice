@@ -1,6 +1,4 @@
-package praktika10.task_1;
-
-import praktika10.task_1.Complex;
+package praktika10;
 
 public interface ComplexAbstractFactory {
     public Complex createComplex();

@@ -1,7 +1,4 @@
-package praktika10.task_1;
-
-import praktika10.task_1.Complex;
-import praktika10.task_1.ComplexAbstractFactory;
+package praktika10;
 
 public class ConcreteFactory implements ComplexAbstractFactory {
     @Override

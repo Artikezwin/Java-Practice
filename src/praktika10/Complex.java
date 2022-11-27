@@ -1,4 +1,4 @@
-package praktika10.task_1;
+package praktika10;
 
 public class Complex {
     private int image;
