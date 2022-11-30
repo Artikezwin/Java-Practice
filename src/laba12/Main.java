@@ -10,7 +10,7 @@ public class Main {
         Pattern formatter3 = Pattern.compile("\\d{0}\\d[1-9]/\\d[10-12]/\\d\\d\\d\\d");
         Pattern formatter4 = Pattern.compile("\\d[10-31]/\\d{0}\\d[1-9]/\\d\\d\\d\\d");
 
-        String s = "29/02/2000";
+        String s = "19/12/2000";
         Matcher matcher1 = null;
         for(int i=0;i<4;i++){
             matcher1 = formatter1.matcher(s);
