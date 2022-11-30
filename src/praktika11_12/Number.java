@@ -1,6 +1,8 @@
 package praktika11_12;
+
 import java.util.StringTokenizer;
-public class Address {
+
+public class Number {
     String[] adress = new String[7];
 
     public void recording1(String line){
@@ -24,4 +26,5 @@ public class Address {
     public String toString() {
         return String.format("%s %s %s %s %s %s %s", adress);
     }
+
 }

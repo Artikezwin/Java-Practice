@@ -46,44 +46,5 @@ public class Main {
         System.out.println(s1);
         System.out.println(s2);
         System.out.println();
-
-        // ЗАДАНИЕ 4
-        int year, month, date, hour, minuts;
-        year = in.nextInt();
-        month = in.nextInt();
-        date = in.nextInt();
-        hour = in.nextInt();
-        minuts = in.nextInt();
-        Date newDate = new Date();
-        newDate.setYear(year-1900);
-        newDate.setMonth(month-1);
-        newDate.setDate(date);
-        newDate.setHours(hour);
-        newDate.setMinutes(minuts);
-        System.out.println(newDate);
-        Calendar newCalendar = Calendar.getInstance();
-        newCalendar.setTime(newDate);
-        System.out.println(newCalendar.getTime());
-        System.out.println();
-
-        // ЗАДАНИЕ 5
-        ArrayList<Integer> lst1 = new ArrayList<Integer>();
-        LinkedList<Integer> lst2 = new LinkedList<Integer>();
-        long startTime = System.nanoTime();
-        lst1.add(1);
-        lst1.add(2);
-        lst1.add(3);
-        lst1.contains(3);
-        lst1.remove(2);
-        long estimatedTime = System.nanoTime() - startTime;
-        startTime = System.nanoTime();
-        lst2.add(1);
-        lst2.add(2);
-        lst2.add(3);
-        lst2.contains(3);
-        lst2.remove(2);
-        long estimatedTime2 = System.nanoTime() - startTime;
-        System.out.println((double) estimatedTime/1_000_000_000+" s");
-        System.out.println((double) estimatedTime2/1_000_000_000+" s");
     }
 }

@@ -16,7 +16,7 @@ public class Main {
         }catch (INNException e){
             System.out.println("Недействительный ИНН:  "+e.getMessage());
             System.out.println("dsws");
-            return;
+            //return;
         }finally{
             System.out.println(1);
         }
