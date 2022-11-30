@@ -10,8 +10,9 @@ public class OrderManager implements Order {
         listAddress = new HashMap<>();
     }
 
-    public static boolean addMenu(Item element, String address){
-        return listAddress.put(address, element) != null;
+    public boolean addMenu(Item element, String address){
+        listAddress.put(address, element);
+        return listAddress.get(address) != null;
     }
 
     @Override

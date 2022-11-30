@@ -82,15 +82,16 @@ public class GUIR extends JFrame {
         dish2.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                orderManager.addMenu(new Dish(5990, "Суши", "Набор 2 кг суши"), address);
+                orderManager.addMenu(new Dish(5990, "Суши", "Набор 2 кг суши"), address + (orderManager.getKol()+1));
                 kol.setText("Кол-во позиций в заказе: " + orderManager.getKol());
+                //dish2.setEnabled(true);
             }
         });
 
         drink2.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                orderManager.addMenu(new Drink(500, "Молочный коктейль", "Со вкусом клубники"), address);
+                orderManager.addMenu(new Drink(500, "Молочный коктейль", "Со вкусом клубники"), address+ (orderManager.getKol()+1));
                 kol.setText("Кол-во позиций в заказе: " + orderManager.getKol());
             }
         });
@@ -105,13 +106,6 @@ public class GUIR extends JFrame {
                 add(new JLabel("Сумма вашего заказа - " + orderManager.getPrice()));
                 add(new JLabel("Адрес доставки: " + address));
                 validate();
-
-                System.out.println("----------------------------");
-                HashMap<String, Item> listAddress = orderManager.getListAddress();
-                for(String key : listAddress.keySet()){
-                    System.out.println(listAddress.get(key).getName()+ " - " + listAddress.get(key).getPrice() + ", адрес: " + key);
-                }
-
             }
         });
 
@@ -119,7 +113,6 @@ public class GUIR extends JFrame {
 
     private void chooseDish(){
         InternetOrder internetOrder = new InternetOrder();
-
         dish1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
