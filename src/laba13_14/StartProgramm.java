@@ -10,7 +10,7 @@ public class StartProgramm {
         formatter[1] = Pattern.compile("\\d\\d.\\d\\d RUB");
         formatter[2] = Pattern.compile("\\d\\d.\\d\\d EU");
 
-        String s = "25.98 EU";
+        String s = "44.35 EU";
         Matcher matcher1 = null;
         boolean flag = false;
         for(int i=0;i<3;i++){

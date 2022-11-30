@@ -6,7 +6,7 @@ import java.awt.*;
 //import java.awt.event.ActionListener;
 import java.awt.event.*;
 
-class GUI extends JFrame{
+public class GUI extends JFrame{
 
     /*JTextField jta = new JTextField(3); //3 - сколько символов видно в текстовом поле
     Font fnt = new Font("Calibri", Font.BOLD, 20); //шрифт, жирный текст, размер
